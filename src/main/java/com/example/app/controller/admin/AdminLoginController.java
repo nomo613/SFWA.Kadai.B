@@ -3,6 +3,7 @@ package com.example.app.controller.admin;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,9 +14,9 @@ import com.example.app.domain.Login;
 import com.example.app.login.LoginAuthority;
 import com.example.app.login.LoginStatus;
 import com.example.app.service.AdminService;
+import com.example.app.validation.LoginGroup;
 
 import jakarta.servlet.http.HttpSession;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @Controller
@@ -34,7 +35,7 @@ public class AdminLoginController {
 
 	@PostMapping("/login")
 	public String login(
-			@Valid Login login,
+			@Validated(LoginGroup.class) Login login,
 			Errors errors) throws Exception {
 		// 入力に不備がある 
 		if(errors.hasErrors()) {

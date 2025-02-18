@@ -15,9 +15,8 @@ public class AdminServiceImpl implements AdminService{
 	AdminMapper adminMapper;
 
 	@Override
-	public Admin getAdminByLoginId(String loginId) throws Exception {
-		return adminMapper.selectByLoginId(loginId);
-		
+	public Admin getAdminByLoginId(String logingId) throws Exception {
+		return adminMapper.selectByLoginId(logingId);
 	}
 
 }

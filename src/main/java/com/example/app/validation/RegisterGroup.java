@@ -1,4 +1,4 @@
-package com.example.app.domain;
+package com.example.app.validation;
 
 public interface RegisterGroup {
 
