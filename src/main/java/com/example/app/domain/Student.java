@@ -14,19 +14,19 @@ public class Student {
 	
 	private Integer id;
 	
-	@NotBlank
-	@Size(max = 30)
+	@NotBlank(groups={RegisterGroup.class})
+	@Size(max = 30, groups={RegisterGroup.class})
 	private String name;
 	
 	@NonNull
 	@DateTimeFormat(pattern = "yyy-MM-dd")
 	private LocalDate birthday;
 	
-	@NotBlank
-	@Size(max = 30)
+	@NotBlank(groups={RegisterGroup.class,LoginGroup.class})
+	@Size(max = 30,groups={RegisterGroup.class})
 	private String loginId;
 	
-	@NotBlank
+	@NotBlank(groups={RegisterGroup.class,LoginGroup.class})
 	private String loginPass;
 	
 	private String status;

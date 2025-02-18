@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<title>教材管理システム</title>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="">教材管理システム</a>
+      <ul class="navbar-nav">
+        <li class="nav-item">山田太郎 [<a href="">ログアウト</a>]</li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="container">
+
+  <h1 class="my-4 h3">視聴覚教材の追加</h1>
+
+  <div class="row">
+    <div class="col">
+
+      <form class="form" action="" method="post">
+        <div class="row mb-3">
+          <label for="name" class="col-md-2 col-form-label">教材名</label>
+          <div class="col-md-10">
+            <input type="text" id="name" class="form-control">
+            <small class="error-message">教材名に関するエラーメッセージ</small>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="publisher" class="col-md-2 col-form-label">出版元</label>
+          <div class="col-md-10">
+            <input type="text" id="publisher" class="form-control">
+            <small class="error-message">出版元に関するエラーメッセージ</small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="note" class="col-md-2 col-form-label">備考</label>
+          <div class="col-md-10">
+            <input type="text" size="50" id="note" class="form-control">
+            <small class="error-message">備考に関するエラーメッセージ</small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="material-type" class="col-md-2 col-form-label">種類</label>
+          <div class="col-md-10">
+            <select id="material-type" class="form-control">
+                <option>書籍</option>
+                <option>DVD</option>
+                <option>オーディオ</option>
+                <option>その他</option>
+            </select>
+          </div>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="保存する">
+        <a href="list-material.html" class="btn btn-light">キャンセル</a>
+      </form>
+
+    </div><!-- /.col- -->
+  </div><!-- /.row -->
+
+</div><!-- /.container -->
+<script src="../js/jquery-3.6.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

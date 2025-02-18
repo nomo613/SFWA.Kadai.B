@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<title>教材管理システム</title>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="">教材管理システム</a>
+      <ul class="navbar-nav">
+        <li class="nav-item">山田太郎 [<a href="">ログアウト</a>]</li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="container">
+
+  <h1 class="my-4 h3">生徒の追加</h1>
+
+  <div class="row">
+    <div class="col">
+
+      <form class="form" action="" method="post">
+        <div class="row mb-3">
+          <label for="loginId" class="col-md-2 col-form-label">ログインID</label>
+          <div class="col-md-10">
+            <input type="text" id="loginId" class="form-control">
+            <small class="error-message">ログインIDに関するエラーメッセージ</small>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="password" class="col-md-2 col-form-label">パスワード</label>
+          <div class="col-md-10">
+            <input type="text" id="password" class="form-control">
+            <small class="error-message">パスワードに関するエラーメッセージ</small>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="name" class="col-md-2 col-form-label">氏名</label>
+          <div class="col-md-10">
+            <input type="text" id="name" class="form-control">
+            <small class="error-message">氏名に関するエラーメッセージ</small>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="birthday" class="col-md-2 col-form-label">生年月日</label>
+          <div class="col-md-10">
+            <input type="date" id="birthday" class="form-control" value="2000-01-01">
+            <small class="error-message">生年月日に関するエラーメッセージ</small>
+          </div>
+        </div>
+        <input class="btn btn-primary" type="submit" value="保存する">
+        <a href="list-student.html" class="btn btn-light">キャンセル</a>
+      </form>
+
+    </div><!-- /.col- -->
+  </div><!-- /.row -->
+
+</div><!-- /.container -->
+<script src="../js/jquery-3.6.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
